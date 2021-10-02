@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS fetch</title>
+  <link rel="stylesheet" href="css/bootstrap5.min.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="text-center bg-danger text-white py-4 display-3 fw-bold">OMDB Movies</h1>
+  </header>
+  <div class="container-xl">
+    <form class="py-4 d-flex align-items-center flex-column flex-md-row js-search-form" action="https://omdbapi.com/?" method="GET">
+      <input class="form-control me-md-3 mb-3 mb-md-0 js-search-input" type="search" name="search" placeholder="Movie title" aria-label="Search">
+      <input class="form-control me-md-3 mb-3 mb-md-0 js-id-input" type="search" name="search-id" placeholder="Movie id" aria-label="Search-id">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <div class="row movies-list">
+    </div>
+  </div>
+
+  <template id="movies-item-template">
+    <div class="mb-4 col-md-4 col-lg-3">
+      <div class="bg-white shadow-sm rounded p-2 h-100">
+        <div class="list-group-item-action">
+          <img class="img-fluid rounded movies-img" src="" alt="" width="" height="150">
+          <div class="py-3 px-2">
+            <h3 class="movies-title h5"></h3>
+            <div class="d-flex justify-content-between">
+              <p class="text-warning text-capitalize"></p>
+              <span class="movies-year"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+  <script src="js/dars.js"></script>
+</body>
+</html>
